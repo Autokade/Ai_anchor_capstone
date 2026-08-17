@@ -28,7 +28,7 @@ setTimeout(() => {
 // --- Constants ---
 const DEFAULT_MODEL_PATH = "./models/kei_vowels_pro/kei_vowels_pro.model3.json"; // Your default model JSON path
 const DEFAULT_MOTIONSYNC_PATH = "./models/kei_vowels_pro/kei_vowels_pro.motionsync3.json"; // Your default MotionSync JSON path
-const BACKEND_URL_TTS = 'http://192.168.1.9:5001/tts'; // *** UPDATE THIS if your Edge TTS Flask server runs on a different port ***
+const BACKEND_URL_TTS = 'http://localhost:5001/tts'; // *** UPDATE THIS if your Edge TTS Flask server runs on a different port ***
 
 // --- Global variables (Module-scoped) ---
 let app; // PIXI Application instance
