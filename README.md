@@ -9,7 +9,6 @@
 
 **An interactive web UI for chatting with Ollama, featuring Hana - a lively 2D anime character**
 
-[![GitHub stars](https://img.shields.io/github/stars/Ashish-Patnaik/HanaVerse?style=social)](https://github.com/Ashish-Patnaik/HanaVerse)
 [![Made with Live2D](https://img.shields.io/badge/Made%20with-Live2D-ff69b4.svg)](https://www.live2d.com/)
 [![Made with Ollama](https://img.shields.io/badge/Made%20with-Ollama-blue.svg)](https://ollama.ai/)
 
