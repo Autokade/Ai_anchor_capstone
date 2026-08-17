@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html amalgamId="3f1a9de9-1b07-4b3a-9b0c-7e1b9e1b9e1b" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="logo.ico">
+    <title>HanaVerse-Chat with Ollama</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="prism/prism.css" rel="stylesheet" />
+    <link href="katex/katex.min.css" rel="stylesheet" />
+    <style>
+        #end {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 20px;
+            font-size: 16px;
+            color: #333;
+        }
+        .social-link {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: #333;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+        .social-link:hover {
+            color: #007bff;
+            transform: scale(1.05);
+        }
+        .social-link img {
+            width: 28px;
+            height: 28px;
+            vertical-align: middle;
+        }
+        .social-link span {
+            font-weight: 500;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <script src="prism/prism.js"></script>
+    <script src="katex/katex.min.js"></script>
+    <h1>HanaVerse</h1>
+    <div class="main-container">
+        <div id="canvas-container">
+            <canvas id="canvas"></canvas>
+        </div>
+        <div class="chat-container">
+            <button id="hamburger-menu" class="hamburger-menu" aria-label="Toggle settings menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div id="ollama-settings-sidebar" class="ollama-settings-sidebar hidden">
+                <div class="ollama-settings">
+                    <div>
+                        <label for="ollama-server-url">Ollama Server URL:</label>
+                        <input type="text" id="ollama-server-url" value="http://localhost:11434">
+                    </div>
+                    <div>
+                        <label for="ollama-model-name">Ollama Model:</label>
+                        <input type="text" id="ollama-model-name" value="llama3:8b">
+                        <small>(e.g., llama3:8b, codellama:7b, mistral:latest)</small>
+                    </div>
+                    <div>
+                        <label for="ollama-system-prompt">System Prompt</label>
+                        <textarea id="ollama-system-prompt" rows="10" placeholder="e.g., You are a helpful AI assistant. Format math using LaTeX. Ingredients and steps should be in list format."></textarea>
+                        <button id="set-system-prompt-button" class="settings-button">Set Prompt</button>
+                    </div>
+                </div>
+            </div>
+            <div id="chat-history">
+                <!-- Chat messages will appear here -->
+            </div>
+            <div id="chat-input-area">
+                <textarea id="user-input" placeholder="Type your message..." rows="2"></textarea>
+                <button id="send-button">Send</button>
+                <button id="stop-button" style="display: none;">Stop</button> 
+            </div>
+            <div id="status">Status: Initializing...</div>
+        </div>
+    </div>
+    <div id="error-log" class="error-log"></div>
+    <div id="end">
+        Made with ♥️ By Ashish
+        <a href="https://github.com/Ashish-Patnaik/HanaVerse" target="_blank" class="social-link" aria-label="Star on GitHub">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" alt="GitHub">
+            <span>Star on GitHub</span>
+        </a>
+        <a href="https://x.com/ashdebugs" target="_blank" class="social-link" aria-label="Follow on X">
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/x.svg" alt="X">
+            <span>Follow on X</span>
+        </a>
+    </div> 
+    <script src="https://cdn.jsdelivr.net/npm/pixi.js@6.5.10/dist/browser/pixi.min.js"></script>
+    <script src="./sdk/live2dcubismcore.min.js"></script>
+    <script src="./sdk/live2d.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pixi-live2d-display@0.4.0/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    <script type="module" src="script.js"></script>
+    <script src="chat.js"></script>
+</body>
+</html>
