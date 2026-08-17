@@ -154,11 +154,3 @@ You may use, copy, and run this software for personal or educational use only.
 5. Prism for syntax highlighting
 6. Live2d motionsync library
 
-
-<div align="center">
-Made with ♥️ by Ashish Patnaik
-</div>
-
-<div align="center">
-Don't Forget to ⭐Star⭐ the repo
-</div>
